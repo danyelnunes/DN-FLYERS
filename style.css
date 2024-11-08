@@ -1,0 +1,360 @@
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Impede a rolagem horizontal extra */
+  background-color: #f9f9f9;
+}
+
+/* Barra de Menu com ícone */
+.menu-icon {
+  display: block;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.menu-icon span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 6px 0;
+}
+
+/* Menu Lateral */
+.menu {
+  position: fixed;
+  top: 0;
+  right: -250px; /* Menu começa escondido à direita */
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  padding-top: 60px;
+  transition: right 0.3s ease;
+  z-index: 999;
+}
+
+.menu a {
+  display: block;
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 20px;
+  transition: background-color 0.3s;
+}
+
+.menu a:hover {
+  background-color: #575757;
+}
+
+/* Quando o menu for mostrado */
+.menu.show {
+  right: 0;
+}
+
+/* Logo */
+.logo {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.logo img {
+  width: 200px;
+  height: auto;
+}
+
+/* Flyers */
+.flyers-container {
+  margin: 20px;
+  padding: 20px;
+}
+
+.flyers-container h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Contêiner dos flyers com rolagem horizontal */
+.flyers {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; /* Permite a rolagem horizontal */
+  scroll-snap-type: x mandatory;
+  padding-bottom: 20px;
+  scroll-behavior: smooth; /* Torna a rolagem suave */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Estilo de cada flyer */
+.flyer {
+  flex: 0 0 auto;
+  width: 250px;
+  height: 300px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  scroll-snap-align: start; /* Garante o alinhamento correto */
+  text-align: center;
+}
+
+.flyer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* A imagem não distorce, apenas cobre a área */
+}
+
+/* Informações do flyer */
+.flyer-info {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.flyer-info h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.flyer-info p {
+  font-size: 14px;
+  margin-top: 5px;
+  font-weight: 300;
+}
+
+/* Seção de pagamento (PIX) */
+.payment-methods {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.payment-methods h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.payment-option {
+  display: ;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.payment-option img {
+  max-width: 50%; /* Garante que a imagem se ajuste ao tamanho do contêiner sem distorcer */
+  height: auto; /* Ajusta a altura proporcionalmente */
+}
+
+.payment-option p {
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Ícone do WhatsApp */
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  border-radius: 50%;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.whatsapp-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+  .flyers {
+    gap: 10px;
+  }
+
+  .flyer {
+    width: 180px;
+    height: 220px;
+  }
+}
+/* Estilos gerais para a página Outros */
+.other-section {
+  padding: 40px;
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+}
+
+.other-section h2 {
+  font-size: 28px;
+  color: #333;
+  margin-top: 20px;
+}
+
+.faq p, .testimonials p, .offers p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.faq p strong, .testimonials p strong, .offers p strong {
+  color: #007bff;
+}
+
+.offers {
+  background-color: #ffeeba;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  font-size: 16px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+/* Estilos gerais da página de contato */
+.contact {
+  padding: 40px;
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+}
+
+.contact h2 {
+  font-size: 32px;
+  color: #333;
+  text-align: center;
+}
+
+.contact p {
+  font-size: 18px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.contact-method {
+  flex: 1;
+  margin: 10px;
+  text-align: center;
+}
+
+.contact-method h3 {
+  font-size: 20px;
+  color: #333;
+}
+
+.contact-method p {
+  font-size: 16px;
+  color: #666;
+}
+
+.social-media a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.contact-form {
+  margin: 40px auto;
+  max-width: 600px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  border-radius: 50%;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.whatsapp-icon img {
+  width: 40px;
+  height: 40px;
+}
+/* Estilos gerais para a página Quem Somos */
+.quem-somos {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.quem-somos h2 {
+  font-size: 28px;  /* Tamanho maior para o título */
+  color: #333;
+}
+
+.quem-somos p {
+  font-size: 16px;  /* Tamanho padrão para o texto */
+  line-height: 1.6;  /* Aumenta o espaçamento entre as linhas para melhor leitura */
+  color: #555;
+}
+
+/* Se quiser aumentar o título principal da página */
+header h1 {
+  font-size: 36px;  /* Tamanho maior para o título principal */
+  text-align: center;
+  margin-top: 40px;
+}
